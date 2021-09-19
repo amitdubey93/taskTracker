@@ -1,0 +1,18 @@
+<form *ngIf="showAddTask" class="add-form" >
+    <div class="form-control">
+        <label for="text">Tasks</label>
+        <input type="text" name="text" id="text" [(ngModel)]="text" placeholder="Add Task"/>
+        {{text}}
+    </div>
+    <div class="form-control">
+        <label for="day">Day & Time</label>
+        <input type="text" name="day" id="day" [(ngModel)]="day" placeholder="Add Day & Time"/>
+        {{day}}
+    </div>
+    <div class="form-control">
+        <label for="text">Set Remainder</label>
+        <input type="checkbox" name="remainder" id="remainder" [(ngModel)]="remainder"/>
+        {{remainder}}
+    </div>
+    <input type="submit" value="Save Task" class="btn btn-primary" (click)="onSubmit()">
+</form>
